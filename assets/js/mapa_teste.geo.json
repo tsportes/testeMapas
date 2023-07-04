@@ -1,0 +1,42 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "properties": {
+                "name": "Estado 1",
+                "id": "E1"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-73.0, 40.0],
+                        [-74.0, 40.0],
+                        [-74.0, 41.0],
+                        [-73.0, 41.0],
+                        [-73.0, 40.0]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Estado 2",
+                "id": "E2"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-75.0, 42.0],
+                        [-76.0, 42.0],
+                        [-76.0, 43.0],
+                        [-75.0, 43.0],
+                        [-75.0, 42.0]
+                    ]
+                ]
+            }
+        }
+    ]
+}
