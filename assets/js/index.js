@@ -1,6 +1,6 @@
 am5.ready(function() {
     // Fetch the GeoJSON file
-    fetch('assets/maps/df.geo.json')
+    fetch('https://github.com/tbrugz/geodata-br/blob/master/geojson/geojs-53-mun.json')
         .then(function(response) {
             // Parse the JSON from the response
             return response.json();
