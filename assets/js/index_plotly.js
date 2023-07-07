@@ -9,7 +9,7 @@ d3.csv('https://tsportes.github.io/testeMapas/assets/data/metricas_balanco.csv',
         var data = [{
             type: 'choroplethmapbox', // Troque 'choropleth' por 'choroplethmapbox'
             geojson: geojson, // Adicione a propriedade geojson
-            locations: unpack(rows, 'No_Localidade_Gis'),
+            locations: unpack(rows, 'Localidade'),
             z: unpack(rows, 'Nr_Volume_Fornecido_1'),
             text: unpack(rows, 'Co_Sk_Sist_Abastecimento_ Gis'),
             zmin: 0,
