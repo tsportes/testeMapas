@@ -1,10 +1,10 @@
-d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows) {
+d3.csv('https://tsportes.github.io/testeMapas/assets/data/metricas_balanco.csv', function(err, rows) {
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
     }
 
     // Carregando o arquivo GeoJSON personalizado
-    d3.json('assets/maps/LocalidadesSinopse.json', function(geojson) {
+    d3.json('https://tsportes.github.io/testeMapas/assets/maps/LocalidadesSinopse.json', function(geojson) {
 
         var data = [{
             type: 'choroplethmapbox', // Troque 'choropleth' por 'choroplethmapbox'
@@ -23,13 +23,13 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_expo
                 [1, 'rgb(84,39,143)']
             ],
             colorbar: {
-                title: 'Millions USD',
-                thickness: 0.2
+                title: 'Valores',
+                thickness: 0.6
             },
             marker: {
                 line: {
                     color: 'rgb(255,255,255)',
-                    width: 2
+                    width: 5
                 }
             }
         }];
