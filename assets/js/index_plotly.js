@@ -43,9 +43,6 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_expo
             autosize: true
         };
 
-        var config = { mapboxAccessToken: "pk.eyJ1IjoidHNwb3J0ZXMiLCJhIjoiY2xqcnZseG9nMGZ3YjNjbmczbmNpeWZjayJ9.MtKJ7qgJ69HLz1Xw3JaHdA" }; // Certifique-se de adicionar seu token de acesso do Mapbox
-
-
-        Plotly.newPlot("myDiv", data, layout, config);
+        Plotly.newPlot("myDiv", data, layout, { showLink: false });
     });
 });
