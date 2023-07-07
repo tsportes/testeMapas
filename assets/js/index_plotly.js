@@ -35,15 +35,13 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_expo
         }];
 
         var layout = {
-            title: '2011 US Agriculture Exports by State',
+            title: 'Poligonais DF',
             mapbox: { // Use a propriedade mapbox em vez de geo
                 style: 'open-street-map', // Ou qualquer outro estilo de mapa que você queira usar
                 zoom: 10 // Ajuste isso de acordo com a área do seu mapa
             },
             autosize: true
         };
-
-        // var config = { mapboxAccessToken: "your Mapbox access token" }; // Certifique-se de adicionar seu token de acesso do Mapbox
 
         Plotly.newPlot("myDiv", data, layout, { showLink: false });
     });
