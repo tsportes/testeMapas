@@ -1,10 +1,14 @@
 d3.csv('https://tsportes.github.io/testeMapas/assets/data/metricas_balanco.csv', function(err, rows) {
     function unpack(rows, key) {
-        return rows.map(function(row) { return row[key]; });
+        return rows.map(function(row) { return row[key].toLowerCase().trim(); }); // transformar em minúsculas e remover espaços em branco
     }
 
     // Carregando o arquivo GeoJSON personalizado
     d3.json('https://tsportes.github.io/testeMapas/assets/maps/LocalidadesSinopse.json', function(geojson) {
+        // Transformar as propriedades GeoJSON em minúsculas e remover espaços em branco
+        geojson.features.forEach(function(feature) {
+            feature.properties.Localidade = feature.properties.Localidade.toLowerCase().trim();
+        });
 
         var data = [{
             type: 'choroplethmapbox', // Troque 'choropleth' por 'choroplethmapbox'
