@@ -1,6 +1,6 @@
 d3.csv('https://tsportes.github.io/testeMapas/assets/data/metricas_balanco.csv', function(err, rows) {
     function unpack(rows, key) {
-        return rows.map(function(row) { return row[key].toLowerCase().trim(); }); // transformar em minúsculas e remover espaços em branco
+        return rows.map(function(row) { return row[key]; });
     }
 
     // Carregando o arquivo GeoJSON personalizado
