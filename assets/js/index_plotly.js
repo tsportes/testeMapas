@@ -4,7 +4,7 @@ d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_expo
     }
 
     // Carregando o arquivo GeoJSON personalizado
-    d3.json(localidades_sinopseLow, function(geojson) {
+    d3.json('assets/maps/LocalidadesSinopse.json', function(geojson) {
 
         var data = [{
             type: 'choroplethmapbox', // Troque 'choropleth' por 'choroplethmapbox'
